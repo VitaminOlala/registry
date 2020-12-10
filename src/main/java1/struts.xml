@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+   <constant name="struts.devMode" value="true" />
+   <constant name="struts.custom.i18n.resources" value="global" />
+      <constant name="struts.enable.SlashesInActionNames" value="true"/>
+	<package name="stanford" extends="struts-default,tiles-default,json-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<action name="qlTinTuc" class="all.Action.TinTuc.TinTucAction">
+			<result name="success">/QuanLiTinTuc.jsp</result>
+		</action>
+		<action name="timKiemTinTuc" class="all.Action.TinTuc.TinTucAction" method="timKiemThongTinTinTuc">
+			<result name="success">/QuanLiTinTuc.jsp</result>
+		</action>
+		<action name="chiTietTinTuc" class="all.Action.TinTuc.TinTucAction" method="chiTietThongTinTinTuc">
+			<result name="success">/TinTucAdd.jsp</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>
+
+		<action name="themMoi" class="all.Action.TinTuc.TinTucAction" method="themMoiHoacCapNhat">
+			<result type="redirectAction">qlTinTuc</result>
+			<result name="input">/TinTucAdd.jsp</result>
+		</action>
+		<action name="xoaTinTuc" class="all.Action.TinTuc.TinTucAction" method="xoaThongTinTinTuc">
+			<result type="redirectAction">qlTinTuc</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>
+
+
+		<action name="qlChuDe" class="all.Action.TinTuc.ChuDeActionJson">
+			<result name="success">/QuanLiChuDe.jsp</result>
+		</action>		
+		<action name="chiTietChuDe" class="all.Action.TinTuc.ChuDeActionJson" method="layChiTietChuDe">
+			<result name="success">/ChuDeAdd.jsp</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>		
+		<action name="themMoiChuDe" class="all.Action.TinTuc.ChuDeActionJson" method="capNhatChuDe">
+			<result type="redirectAction">qlChuDe</result>
+			<result name="input">/ChuDeAdd.jsp</result>
+		</action>	
+		<action name="xoaChuDe" class="all.Action.TinTuc.ChuDeActionJson" method="xoaChuDe">
+			<result type="redirectAction">qlChuDe</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>		
+		
+		<action name="qlNguoiDung" class="all.Action.TinTuc.NguoiDungAction">
+			<result name="success">/QuanLiNguoiDung.jsp</result>
+		</action>		
+		<action name="dkNguoiDung" class="all.Action.TinTuc.NguoiDungAction">
+			<result name="success">/DangKyNguoiDung.jsp</result>
+		</action>		
+			
+		<action name="xoaNguoiDung" class="all.Action.TinTuc.NguoiDungAction" method="xoaThongTinNguoiDung">
+			<result type="redirectAction">qlNguoiDung</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>
+		<action name="timKiemNguoiDung" class="all.Action.TinTuc.NguoiDungAction" method="timKiemThongTinNguoiDung">
+			<result name="success">/QuanLiNguoiDung.jsp</result>
+		</action>	
+		
+		<action name="qlVaiTro" class="all.Action.TinTuc.VaiTroAction">
+			<result name="success">/QuanLiVaiTro.jsp</result>
+		</action>		
+		<action name="chiTietVaiTro" class="all.Action.TinTuc.VaiTroAction" method="layChiTietVaiTro">
+			<result name="success">/VaiTroAdd.jsp</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>		
+		<action name="themMoiVaiTro" class="all.Action.TinTuc.VaiTroAction" method="themMoiHoacCapNhat">
+			<result type="redirectAction">qlVaiTro</result>
+			<result name="input">/VaiTroAdd.jsp</result>
+		</action>	
+		<action name="xoaVaiTro" class="all.Action.TinTuc.VaiTroAction" method="xoaVaiTro">
+			<result type="redirectAction">qlVaiTro</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>
+		
+		<action name="qlChucNang" class="all.Action.TinTuc.ChucNangAction">
+			<result name="success">/QuanLiChucNang.jsp</result>
+		</action>		
+		<action name="chiTietChucNang" class="all.Action.TinTuc.ChucNangAction" method="chiTietThongTinChucNang">
+			<result name="success">/ChucNangAdd.jsp</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>		
+		<action name="themMoiChucNang" class="all.Action.TinTuc.ChucNangAction" method="themMoiHoacCapNhat">
+			<result type="redirectAction">qlChucNang</result>
+			<result name="input">/ChuDeAdd.jsp</result>
+		</action>	
+		<action name="xoaChucNang" class="all.Action.TinTuc.ChucNangAction" method="xoaThongTinChucNang">
+			<result type="redirectAction">qlChucNang</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>	
+
+		<action name="trangChu"
+			class="all.Action.TinTuc.TinTucAction" method="trangChuTinTuc">
+			<result name="success" type="tiles">trangChu</result>
+		</action>
+
+		<action name="thongTinNews" class="all.Action.TinTuc.TinTucAction" method="trangChiTietTinTuc">
+			<result name="success" type="tiles">thongTinNews</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>
+		<action name="qlttTinTuc"
+			class="all.Action.TinTuc.TinTucAction" method="quanLyThongTinTinTuc">
+			<result name="success" type="tiles">danhSachTinTuc</result>
+		</action>
+		<action name="themMoiTinTuc" class="all.Action.TinTuc.TinTucAction" method="themMoiHoacCapNhat">
+			<result type="redirectAction">qlttTinTuc</result>
+			<result name="input" type="tiles">themTinTuc</result>
+		</action>
+		<action name="chiTietTinTuc" class="all.Action.TinTuc.TinTucAction" method="chiTietThongTinTinTuc">
+			<result name="success" type="tiles">themTinTuc</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>
+		<action name="xoaTinTuc" class="all.Action.TinTuc.TinTucAction" method="xoaThongTinTinTuc">
+			<result type="redirectAction">qlttTinTuc</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>
+		<action name="dsChuDe"
+			class="all.Action.TinTuc.ChuDeActionJson">
+			<result name="success" type="tiles">
+			danhSachChuDe
+			</result>
+		</action>	
+		<action name="qlCmt" class="all.Action.TinTuc.NhanXetAction">
+			<result name="success">/QuanLiNhanXet.jsp</result>
+		</action>
+		<action name="timKiemNhanXet" class="all.Action.TinTuc.NhanXetAction" method="timKiemThongTinNhanXet">
+			<result name="success">/QuanLiNhanXet.jsp</result>
+		</action>
+		<action name="qlttNhanXet"
+			class="all.Action.TinTuc.NhanXetAction" method="quanLyThongTinNhanXet">
+			<result name="success" type="tiles">danhSachNhanXet</result>
+		</action>
+
+		<action name="xoaNhanXet" class="all.Action.TinTuc.NhanXetAction" method="xoaThongTinNhanXet">
+			<result type="redirectAction">qlCmt</result>
+			<result name="error">/ThongBaoLoi.jsp</result>
+		</action>	
+		
+		<action name="chiTiet"
+			class="all.Action.TinTuc.TinTucAction" method="chiTietTinTucTrangChu">
+			<result name="success" type="tiles">chiTietTinTuc</result>
+		</action>							
+	</package>
+</struts>

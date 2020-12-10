@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="enity.NguoiDung">
+	<class name="NguoiDung" table="NguoiDung">
+		<id name="id" type="java.lang.Integer">
+			<column name="IdUser" />
+			<generator class="identity" />
+		</id>
+		<property name="tenDangNhap" type="string" length="50" column="TenDangNhap" />
+		<property name="matKhau" type="string" length="50" column="MatKhau" />
+		<property name="hoTen" type="string" length="30" column="HoTen" />
+		<property name="dienThoai" type="string" length="20" column="DienThoai" />
+		<property name="email" type="string" length="50" column="Email" />
+		<property name="diaChi" type="string" length="250" column="DiaChi" />
+
+	</class>
+</hibernate-mapping>

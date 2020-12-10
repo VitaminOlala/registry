@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Khai báo kiểu cho file tiles -->
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- Khai báo tạo 1 layout dùng tiles -->
+	<definition name="baseLayoutHome"
+		template="/WEB-INF/home/layout.jsp">
+		<put-attribute name="title" value="Template" />
+		<put-attribute name="header"
+			value="/WEB-INF/home/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/home/menu.jsp" />
+		<put-attribute name="sidebar"
+			value="/WEB-INF/home/sidebar.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/home/body.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/home/footer.jsp" />
+	</definition>
+	<!-- Khai báo template admin -->
+	<definition name="baseLayoutAdmin"
+		template="/WEB-INF/admin/layout.jsp">
+		<put-attribute name="title" value="Template" />
+		<put-attribute name="header"
+			value="/WEB-INF/admin/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/admin/menu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/admin/body.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/admin/footer.jsp" />
+	</definition>
+	<definition name="baseLayoutNews"
+		template="/WEB-INF/category1/layout.jsp">
+		<put-attribute name="title" value="Template" />
+		<put-attribute name="header"
+			value="/WEB-INF/category1/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/category1/menu.jsp" />
+		<put-attribute name="sidebar"
+			value="/WEB-INF/category1/sidebar.jsp" />			
+		<put-attribute name="body"
+			value="/WEB-INF/category1/body.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/category1/footer.jsp" />
+	</definition>	
+	<definition name="thongTinNews" extends="baseLayoutNews">
+		<put-attribute name="title"
+			value="Hệ thống thông tin tin tức - News" />
+		<put-attribute name="body" value="/category.jsp" />
+	</definition>
+		
+	<definition name="trangChu" extends="baseLayoutHome">
+		<put-attribute name="title"
+			value="Hệ thống thông tin tin tức - News" />
+		<put-attribute name="body" value="/TrangChu.jsp" />
+	</definition>
+	<definition name="chiTietTinTuc" extends="baseLayoutHome">
+		<put-attribute name="title"
+			value="Trang chi tiết - Hệ thống thông tin tin tức - News" />
+		<put-attribute name="body" value="/ChiTiet.jsp" />
+	</definition>
+	<definition name="chiTietUsers" extends="baseLayoutAdmin">
+		<put-attribute name="title"
+			value="Trang chi tiết - Hệ thống thông tin tin tức - News" />
+		<put-attribute name="body" value="/QuanLiNguoiDung.jsp" />
+	</definition>	
+	<definition name="danhSachTinTuc" extends="baseLayoutAdmin">
+		<put-attribute name="title"
+			value="Quản trị Hệ thống News" />
+		<put-attribute name="body"
+			value="/QuanLiTinTuc.jsp" />
+	</definition>
+	<definition name="themTinTuc" extends="baseLayoutAdmin">
+		<put-attribute name="title"
+			value="Thêm mới thông tin tin tức" />
+		<put-attribute name="body" value="/TinTucAdd.jsp" />
+	</definition>
+	<definition name="danhSachNhanXet" extends="baseLayoutAdmin">
+		<put-attribute name="title"
+			value="Quản trị Hệ thống Nhận xét" />
+		<put-attribute name="body"
+			value="/QuanLiNhanXet.jsp" />
+	</definition>	
+	<definition name="danhSachChuDe" extends="baseLayoutAdmin">
+		<put-attribute name="title"
+			value="Quản trị Hệ thống News" />
+		<put-attribute name="body"
+			value="/QuanLiChuDe.jsp" />
+	</definition>
+</tiles-definitions>

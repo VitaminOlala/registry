@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+/**********************************/
+/*=============header=============*/
+/*********************************/
+#header {
+  background-image: linear-gradient(to right,#B5B5B5,#2c3e50);
+}
+#home {
+  padding-right: 5%;
+}
+.socialIcon a {
+  color: white;
+  line-height: 80px;
+  font-family: arial;
+  font-size: 17px;
+}
+#news {
+  padding-left: 5%;
+}
+.logo img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 100%;
+}
+.searchBar {
+  width: 100%;
+  height: 100%;
+  padding-top: 2%;
+}
+.searchBar input, .searchBar button {
+  float: left;
+  height: 35px;
+  line-height: 35px;
+}
+.searchBar input {
+  margin-left: 10%;
+  width: 70%;
+  border-radius: 20px 0 0 20px;
+  padding-left: 15px;
+}
+.searchBar button {
+  text-align: center;
+  width: 12%;
+  border-radius: 0 20px 20px 0;
+}
+.searchBar button img {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+/**********************************/
+/*===========end header===========*/
+/*********************************/
+
+/*--------------------------------*/
+
+/**********************************/
+/*==============main==============*/
+/*********************************/
+#navbar {
+  background-image: linear-gradient(to top right,white,#9A9A9A);
+  z-index: 499;
+}
+#navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  height: 50px;
+}
+#navbar ul li {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: left;
+  height: 100%;
+  position: relative;
+}
+.menu2 {
+  width: 200px;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 500;
+}
+.menu2 li {
+  background: #D4D4D4;
+  width: 100%;
+}
+.menu2 li a:hover {
+  border: none !important;
+  background: #393939 !important;
+}
+#navbar li:hover .menu2 {
+  display: block;
+}
+#navbar li a:hover {
+  background: black;
+  color: white;
+  border-bottom: 2px solid red;
+}
+#navbar a {
+  transition: .2s;
+  display: block;
+  padding: 0 45px;
+  line-height: 50px;
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  font-family: arial;
+  font-size: 20px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+#slider {
+  background-image: url(../IMG/nick-karvounis-76125-unsplash.jpg);
+  background-size: cover;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#carouselExampleIndicators, .picAndQuote {
+  opacity: 1;
+}
+blockquote {
+  font-style: italic;
+  font-size: 25px;
+  padding-top: 15px;
+  color: white;
+  text-align: center;
+  font-family: Courier New;
+}
+blockquote:after {
+  content: '"';
+}
+blockquote:before {
+  content: '"';
+}
+
+#main {
+  background: black;
+}
+
+#main h3 a {
+  color: white;
+  font-size: 30px;
+  font-family: arial;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#main h3 a:hover {
+  text-decoration: none;
+  color: #B3B3B3;
+}
+.hotpot h3, .drink h3, .barbecue h3, .restaurant h3 {
+  text-align: center;
+}
+.hotpot img, .drink img, .barbecue img {
+  width: 100%;
+}
+.hotpot, .drink, .barbecue, .restaurant {
+  padding-top: 20px;
+}
+.restaurant img {
+  width: 100%;
+}
+/**********************************/
+/*============end main============*/
+/*********************************/
+
+/*--------------------------------*/
+
+/**********************************/
+/*=============footer=============*/
+/*********************************/
+#footer {
+  background: rgb(236, 233, 223);
+  padding: 25px 0;
+}
+.logoFooter img {
+  width: 150px;
+  border-radius: 100%;
+}
+#footer .contact p img {
+  width: 25px;
+}
+.contact h5 {
+  margin-bottom: 15px;
+}
+.contact p {
+  font-size: 16px;
+  margin: 5px;
+}
+.contact p a {
+  text-decoration: none;
+  text-transform: none;
+}
+.address p {
+  font-size: 14px;
+}
+.address img {
+  width: 25px;
+}
+#footer h5 {
+  text-align: center;
+  color: grey;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
+}
+#footer .introduction a {
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  margin-left: 20px;
+}
+#footer .introduction a:hover {
+  color: blue;
+}
+#footer .introduction a img {
+  width: 35px;
+}
+.payment p {
+  font-size: 18px;
+}
+#footer .payment p img {
+  width: 150px;
+}
+/**********************************/
+/*===========end footer===========*/
+/*********************************/
+#banner-right {
+  display: block;
+  float: right;
+  margin-top: 140px;
+}
+#banner-left {
+  display: block;
+  float: left;
+  margin-top: 140px;
+}
+@media only screen and (max-width: 800px) {
+  #banner-left, #banner-right {
+    display: none;
+  }
+  #fullScreen, #ads {
+    display: none;
+  }
+}
+#fullScreen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: black;
+  opacity: .7;
+  z-index: 998;
+}
+#ads a {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+}
+#ads a span {
+  z-index: 1000;
+  position: absolute;
+}
+#ads img {
+  width: 400px;
+  height: 400px;
+  margin-left: -200px;
+  margin-top: -200px;
+}
+#ads span img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -20px;
+  right: -20px;
+}
